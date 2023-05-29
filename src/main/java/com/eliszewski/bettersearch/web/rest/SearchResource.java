@@ -157,6 +157,12 @@ public class SearchResource {
         return ResponseUtil.wrapOrNotFound(searchDTO);
     }
 
+    @GetMapping("/searches/current-user")
+    public List<SearchDTO> getSearchForUser() {
+        log.debug("REST request to get Searches for current user");
+        return searchService.findAllForCurrentUser();
+    }
+
     /**
      * {@code DELETE  /searches/:id} : delete the "id" search.
      *

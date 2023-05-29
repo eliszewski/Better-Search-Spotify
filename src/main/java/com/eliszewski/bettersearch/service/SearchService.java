@@ -99,6 +99,10 @@ public class SearchService {
         return searchRepository.findAllWithEagerRelationships(pageable).map(searchMapper::toDto);
     }
 
+    public List<SearchDTO> findAllForCurrentUser() {
+        return searchRepository.findByUserIsCurrentUser().stream().map(searchMapper::toDto).collect(Collectors.toList());
+    }
+
     /**
      * Get one search by id.
      *
