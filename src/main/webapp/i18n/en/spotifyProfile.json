@@ -1,0 +1,28 @@
+{
+  "betterSearchSpotifyApp": {
+    "spotifyProfile": {
+      "home": {
+        "title": "Spotify Profiles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Spotify Profile",
+        "createOrEditLabel": "Create or edit a Spotify Profile",
+        "notFound": "No Spotify Profiles found"
+      },
+      "created": "A new Spotify Profile is created with identifier {{ param }}",
+      "updated": "A Spotify Profile is updated with identifier {{ param }}",
+      "deleted": "A Spotify Profile is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Spotify Profile {{ id }}?"
+      },
+      "detail": {
+        "title": "Spotify Profile"
+      },
+      "id": "ID",
+      "accessToken": "Access Token",
+      "refreshToken": "Refresh Token",
+      "accessTokenExpiration": "Access Token Expiration",
+      "refreshTokenExpiration": "Refresh Token Expiration",
+      "user": "User"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "betterSearchSpotifyApp": {
+    "search": {
+      "home": {
+        "title": "Searches",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Search",
+        "createOrEditLabel": "Create or edit a Search",
+        "notFound": "No Searches found"
+      },
+      "created": "A new Search is created with identifier {{ param }}",
+      "updated": "A Search is updated with identifier {{ param }}",
+      "deleted": "A Search is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Search {{ id }}?"
+      },
+      "detail": {
+        "title": "Search"
+      },
+      "id": "ID",
+      "name": "Name",
+      "date": "Date",
+      "createPlayist": "Create Playist",
+      "user": "User",
+      "searchParameter": "Search Parameter",
+      "music": "Music"
+    }
+  }
+}

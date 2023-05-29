@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Search.
+    -->
+    <changeSet id="20230529193620-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="search"
+                                 constraintName="fk_search__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="search_parameter_id"
+                                 baseTableName="search"
+                                 constraintName="fk_search__search_parameter_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="search_parameter"/>
+    </changeSet>
+</databaseChangeLog>

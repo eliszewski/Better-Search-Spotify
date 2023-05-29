@@ -1,0 +1,28 @@
+{
+  "betterSearchSpotifyApp": {
+    "searchParameter": {
+      "home": {
+        "title": "Search Parameters",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Search Parameter",
+        "createOrEditLabel": "Create or edit a Search Parameter",
+        "notFound": "No Search Parameters found"
+      },
+      "created": "A new Search Parameter is created with identifier {{ param }}",
+      "updated": "A Search Parameter is updated with identifier {{ param }}",
+      "deleted": "A Search Parameter is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Search Parameter {{ id }}?"
+      },
+      "detail": {
+        "title": "Search Parameter"
+      },
+      "id": "ID",
+      "type": "Type",
+      "attributeName": "Attribute Name",
+      "albumType": "Album Type",
+      "searchValue": "Search Value",
+      "search": "Search"
+    }
+  }
+}

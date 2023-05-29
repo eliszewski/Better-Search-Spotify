@@ -1,0 +1,57 @@
+{
+  "applications": ["BetterSearchSpotify"],
+  "changelogDate": "20230529193622",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "music",
+  "fields": [
+    {
+      "fieldName": "artist",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "album",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "uri",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "releasedYear",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "externalUrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "explicit",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Music",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "search",
+      "otherEntityRelationshipName": "music",
+      "relationshipName": "search",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

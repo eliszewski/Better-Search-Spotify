@@ -1,0 +1,40 @@
+{
+  "applications": ["BetterSearchSpotify"],
+  "changelogDate": "20230529193621",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "spotify_profile",
+  "fields": [
+    {
+      "fieldName": "accessToken",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "refreshToken",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accessTokenExpiration",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "refreshTokenExpiration",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SpotifyProfile",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

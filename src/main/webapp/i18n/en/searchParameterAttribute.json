@@ -1,0 +1,10 @@
+{
+  "betterSearchSpotifyApp": {
+    "SearchParameterAttribute": {
+      "null": "",
+      "ALBUM": "ALBUM",
+      "TITLE": "TITLE",
+      "ARTIST": "ARTIST"
+    }
+  }
+}

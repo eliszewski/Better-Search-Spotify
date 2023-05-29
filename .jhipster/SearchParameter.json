@@ -1,0 +1,42 @@
+{
+  "applications": ["BetterSearchSpotify"],
+  "changelogDate": "20230529193623",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "search_parameter",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "SearchParameterType",
+      "fieldValues": "STARTSWITH (Starts-with),CONTAINS (Contains),ENDSWITH (Ends-with),BEFOREDATE (Before-Date),AFTERDATE (After-Date),REGEX (Regular-Expression),TRACKNUMBER (Track-Number),ALBUMORDER (Album-Order),LENGTH (Length),OVERLENGTH (Over-Length),UNDERLENGTH (Under-Length)"
+    },
+    {
+      "fieldName": "attributeName",
+      "fieldType": "SearchParameterAttribute",
+      "fieldValues": "ALBUM,TITLE,ARTIST"
+    },
+    {
+      "fieldName": "albumType",
+      "fieldType": "AlbumType",
+      "fieldValues": "ALBUM (album),COMPILATION (compilation),SINGLE (single)"
+    },
+    {
+      "fieldName": "searchValue",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SearchParameter",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "search",
+      "otherEntityRelationshipName": "searchParameter",
+      "relationshipName": "search",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

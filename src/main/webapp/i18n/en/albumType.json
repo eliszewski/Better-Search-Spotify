@@ -1,0 +1,10 @@
+{
+  "betterSearchSpotifyApp": {
+    "AlbumType": {
+      "null": "",
+      "ALBUM": "album",
+      "COMPILATION": "compilation",
+      "SINGLE": "single"
+    }
+  }
+}

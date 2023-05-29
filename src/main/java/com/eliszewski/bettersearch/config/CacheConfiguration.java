@@ -48,6 +48,12 @@ public class CacheConfiguration {
             createCache(cm, com.eliszewski.bettersearch.domain.User.class.getName());
             createCache(cm, com.eliszewski.bettersearch.domain.Authority.class.getName());
             createCache(cm, com.eliszewski.bettersearch.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.eliszewski.bettersearch.domain.Search.class.getName());
+            createCache(cm, com.eliszewski.bettersearch.domain.Search.class.getName() + ".music");
+            createCache(cm, com.eliszewski.bettersearch.domain.SpotifyProfile.class.getName());
+            createCache(cm, com.eliszewski.bettersearch.domain.Music.class.getName());
+            createCache(cm, com.eliszewski.bettersearch.domain.SearchParameter.class.getName());
+            createCache(cm, com.eliszewski.bettersearch.domain.SearchParameter.class.getName() + ".searches");
             // jhipster-needle-ehcache-add-entry
         };
     }

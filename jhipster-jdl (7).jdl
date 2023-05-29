@@ -1,0 +1,90 @@
+
+application {
+  config {
+    baseName BetterSearchSpotify,
+    applicationType monolith,
+    packageName com.eliszewski.bettersearch,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework react
+  }
+  entities *
+}
+ entity Search {
+ 	name String required
+    date Instant required
+    createPlayist Boolean required
+ }
+ 
+entity SpotifyProfile {
+ 	accessToken String
+    refreshToken String
+    accessTokenExpiration Instant
+    refreshTokenExpiration Instant
+ }
+ 
+entity Music {
+ 	artist String required
+    title String required
+    album String required
+    uri String required
+    releasedYear String required
+    externalUrl String required
+    explicit Boolean
+ }
+ 
+entity SearchParameter{
+	type SearchParameterType 
+    attributeName SearchParameterAttribute
+    albumType AlbumType
+    searchValue String 
+ }
+
+enum SearchParameterType{
+	STARTSWITH("Starts-with"),
+    CONTAINS("Contains"),
+    ENDSWITH("Ends-with"),
+    BEFOREDATE("Before-Date"),
+    AFTERDATE("After-Date"),
+    REGEX("Regular-Expression"),
+    TRACKNUMBER("Track-Number"),
+    ALBUMORDER("Album-Order"),
+    LENGTH("Length"),
+    OVERLENGTH("Over-Length"),
+    UNDERLENGTH("Under-Length")
+}
+
+enum AlbumType {
+    ALBUM("album"),
+    COMPILATION("compilation"),
+    SINGLE("single")
+}
+enum SearchParameterAttribute{
+ALBUM,
+TITLE,
+ARTIST
+}
+
+ 
+relationship OneToOne {
+SpotifyProfile{user(login)} to User
+}
+
+relationship ManyToOne {
+Music to Search
+Search{user(login)} to User
+}
+
+relationship OneToMany {
+SearchParameter to Search
+}
+
+
+dto * with mapstruct
+service * with serviceClass
+
+
+
+
+
+    
